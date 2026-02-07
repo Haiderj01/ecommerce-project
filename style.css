@@ -1,0 +1,39 @@
+/* External CSS - Border, Margin, Padding, Font, Text Decoration */
+
+body {
+    background: linear-gradient(135deg, #8186d9, #9face6);
+    font-family: "Segoe UI", Arial, sans-serif;   /* Font */
+    margin: 0;                                   /* Margin */
+    padding: 0;                                  /* Padding */
+}
+
+h2 {
+    text-align: center;                          /* Text decoration */
+    color: #2c3e50;
+    margin-top: 30px;                            /* Margin */
+}
+
+form {
+    width: 420px;
+    margin: 30px auto;                           /* Margin */
+    background: #ffffff;
+    padding: 25px 30px;                          /* Padding */
+    border-radius: 12px;                         /* Border */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+label {
+    font-weight: 600;                            /* Font */
+    color: #34495e;
+    margin-top: 12px;
+    display: block;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    border: none;                                /* Border */
+    border-radius: 6px;
+    padding: 10px 20px;                          /* Padding */
+    font-size: 15px;                             /* Font */
+    cursor: pointer;
+}

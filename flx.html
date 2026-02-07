@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Personal Portfolio</title>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height:100vh;
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:55px 20px 35px;
+}
+
+header h1{
+    font-size:48px;
+}
+
+header p{
+    font-size:20px;
+    margin-top:10px;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:35px;
+    flex-wrap:wrap;
+}
+
+nav button{
+    background:rgba(255,255,255,0.25);
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+nav button:hover,
+nav button.active{
+    background:white;
+    color:#203a43;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    padding:20px;
+}
+
+.section{
+    display:none;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    padding:50px;
+    border-radius:24px;
+    animation:fadeScale 0.6s ease;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:28px;
+    font-size:36px;
+}
+
+.section p{
+    font-size:20px;
+    line-height:1.9;
+    text-align:center;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:22px;
+}
+
+.skill{
+    background:rgba(255,255,255,0.30);
+    padding:26px;
+    border-radius:20px;
+    text-align:center;
+    font-size:19px;
+}
+
+.project{
+    background:rgba(255,255,255,0.30);
+    padding:26px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin:14px 0;
+    border:none;
+    border-radius:14px;
+    font-size:16px;
+}
+
+button.send{
+    background:white;
+    color:#203a43;
+    border:none;
+    padding:15px;
+    width:100%;
+    border-radius:35px;
+    font-size:17px;
+}
+
+@keyframes fadeScale{
+    from{opacity:0; transform:scale(0.96);}
+    to{opacity:1; transform:scale(1);}
+}
+
+footer{
+    text-align:center;
+    margin:35px 0 25px;
+    font-size:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Haider Jhalodwala</h1>
+    <p>Web Developer | Programmer | Student</p>
+</header>
+
+<nav>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('certificates')">Certificates</button>
+    <button onclick="showSection('contact')">Contact</button>
+    <button onclick="showSection('socials')">Socials</button>
+    <button onclick="showSection('resume')">Resume</button>
+</nav>
+
+<div class="container">
+
+    <!-- ABOUT -->
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate student and web developer with strong interest in
+            front-end development, UI design, and programming.
+            I enjoy building clean, responsive, and user-friendly applications.
+        </p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div id="education" class="section">
+        <h2>Education</h2>
+        <p>
+            Bachelor of Computer Science <br>
+            Currently Pursuing <br>
+            Focused on Web Development, Programming, and Machine Learning
+        </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="section">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Personal Portfolio</h3>
+            <p>Modern portfolio using HTML, CSS and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Student Registration System</h3>
+            <p>Responsive form with validation.</p>
+        </div>
+        <div class="project">
+            <h3>Machine Learning Project</h3>
+            <p>Data analysis and prediction using Python.</p>
+        </div>
+    </div>
+
+    <!-- CERTIFICATES -->
+    <div id="certificates" class="section">
+        <h2>Certificates</h2>
+        <p>
+            • Web Development Certification <br>
+            • Python Programming Certification <br>
+            • Machine Learning Basics Certification
+        </p>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+        <h2>Contact Me</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button class="send">Send Message</button>
+    </div>
+
+    <!-- SOCIALS -->
+    <div id="socials" class="section">
+        <h2>Social Profiles</h2>
+        <p>
+            LinkedIn: linkedin.com/in/haiderjhalodwala <br>
+            GitHub: github.com/haiderjhalodwala <br>
+            Email: haider@example.com
+        </p>
+    </div>
+
+    <!-- RESUME -->
+    <div id="resume" class="section">
+        <h2>Resume</h2>
+        <p>
+            <a href="resume.pdf" target="_blank" style="color:white; text-decoration:underline;">
+                Click here to view/download my resume
+            </a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Haider Jhalodwala | Personal Portfolio
+</footer>
+
+<script>
+function showSection(id){
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+showSection('about');
+</script>
+
+</body>
+</html>
